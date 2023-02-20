@@ -53,23 +53,23 @@ public class PetStoreTest {
 	        .accept(ContentType.JSON)
 			// When
 			.when()
-				.get("/v2/pet/9223372036854023000")
+				.get("/v2/pet/"+Constants.INVALID_ID)
 			// Then
 	            .then()
 	            	.assertThat()
-	                .statusCode(404)
-	                .body("code", equalTo(1))
-	                .body("type", equalTo("error"))
-	                .body("message", equalTo("Pet not found"))
+	                .statusCode(HttpStatus.RESP_NOT_FOUND)
+	                .body("code", equalTo(Constants.PET_NOT_FOUND_ERROR_CODE))
+	                .body("type", equalTo(Constants.PET_NOT_FOUND_ERROR_TYPE))
+	                .body("message", equalTo(Constants.PET_NOT_FOUND_ERRORMSG))
 	                .header("content-type", equalTo("application/json"));
 	                
 	    }
 	    
 	    @Test
-	    void addNewPetToStore(){
+	    void addNewPetToStorePositiveTest(){
 	    	
 	    	// Creating a File instance
-	        File jsonData = new File("src/test/resources/Payloads/jsondemo.json");
+	        File jsonData = new File("src/test/resources/Payloads/addNewPet.json");
 	        
 	        given()
 	        .baseUri("https://petstore.swagger.io")
@@ -88,6 +88,32 @@ public class PetStoreTest {
 //	                .body("category.name", equalTo("Cat"))
 //	                .body("name", equalTo("Hardy"))
 //	                .body("status", equalTo("sold"))
+	                .header("content-type", equalTo("application/json"))
+	                .log().all();
+	               
+	                
+	    }
+	    
+	    @Test    
+	    void addNewPetToStoreNegativeTest(){
+	    	
+	    	// Creating a File instance
+	        File jsonData = new File("src/test/resources/Payloads/addNewPetNegativeTest.json");
+	        
+	        given()
+	        .baseUri("https://petstore.swagger.io")
+	        .contentType("application/json")
+	        .body(jsonData)
+			// When
+			.when()
+				.post("/v2/pet")
+			// Then
+	            .then()
+	            	.assertThat()
+	                .statusCode(HttpStatus.RESP_INTERNAL_SERVER_ERROR)
+	                .body("code", equalTo(Constants.ADD_NEW_PET_ERROR_CODE))
+	                .body("type", equalTo(Constants.ADD_NEW_PET_ERROR_TYPE))
+	                .body("message", equalTo(Constants.ADD_NEW_PET_ERRORMSG))
 	                .header("content-type", equalTo("application/json"))
 	                .log().all();
 	               
