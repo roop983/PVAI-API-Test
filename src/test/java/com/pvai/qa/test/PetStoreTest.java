@@ -31,17 +31,16 @@ public class PetStoreTest {
 	        .accept(ContentType.JSON)
 			// When
 			.when()
-				.get("/v2/pet/7574746")
+				.get("/v2/pet/"+Constants.ID_SOLD)
 			// Then
 	            .then()
 	            	.assertThat()
 	                .statusCode(HttpStatus.RESP_OK)
-	                .body("id", equalTo(7574746))
-	                .body("category.id", equalTo(1))
-	                //.body("category.name", equalTo("Cat"))
-	                .body("category.name", equalTo("Cat"))
-	                .body("name", equalTo("Hardy"))
-	                .body("status", equalTo("sold"))
+	                .body("id", equalTo(Constants.ID_SOLD))
+	                .body("category.id", equalTo(Constants.ID_CATEGORY))
+	                .body("category.name", equalTo(Constants.CATEGORY_NAME_SOLD))
+	                .body("name", equalTo(Constants.NAME_SOLD))
+	                .body("status", equalTo(Constants.STATUS_SOLD))
 	                .header("content-type", equalTo("application/json"));
 	                
 	    }
@@ -72,12 +71,10 @@ public class PetStoreTest {
 	    	// Creating a File instance
 	        File jsonData = new File("src/test/resources/Payloads/jsondemo.json");
 	        
-	        String jsonPayload = "{\\r\\n  \\\"id\\\": 9223372036854604000,\\r\\n  \\\"category\\\": {\\r\\n    \\\"id\\\": 0,\\r\\n    \\\"name\\\": \\\"string\\\"\\r\\n  },\\r\\n  \\\"name\\\": \\\"doggie\\\",\\r\\n  \\\"photoUrls\\\": [\\r\\n    \\\"string\\\"\\r\\n  ],\\r\\n  \\\"tags\\\": [\\r\\n    {\\r\\n      \\\"id\\\": 0,\\r\\n      \\\"name\\\": \\\"string\\\"\\r\\n    }\\r\\n  ],\\r\\n  \\\"status\\\": \\\"sold\\\"\\r\\n}";
-	 
 	        given()
 	        .baseUri("https://petstore.swagger.io")
-	        .accept(ContentType.JSON)
-	        .body(jsonPayload)
+	        .contentType("application/json")
+	        .body(jsonData)
 			// When
 			.when()
 				.post("/v2/pet")
@@ -92,6 +89,51 @@ public class PetStoreTest {
 //	                .body("name", equalTo("Hardy"))
 //	                .body("status", equalTo("sold"))
 	                .header("content-type", equalTo("application/json"))
+	                .log().all();
+	               
+	                
+	    }
+	    
+	    
+	    @Test
+	    void test1(){
+	    	
+	    	// Creating a File instance
+	        //File jsonData = new File("src/test/resources/Payloads/jsondemo.json");
+	        
+	        //String jsonString = "{\"username\" : \"admin\",\"password\" : \"password123\"}";
+			
+	        given()
+	        .baseUri("https://petstore.swagger.io/v2/pet")
+	        .accept(ContentType.JSON)
+		  	.contentType("application/json")
+	        .body("{\n"
+	        		+ "  \"id\": 9223372036854604000,\n"
+	        		+ "  \"category\": {\n"
+	        		+ "    \"id\": 0,\n"
+	        		+ "    \"name\": \"string\"\n"
+	        		+ "  },\n"
+	        		+ "  \"name\": \"doggie\",\n"
+	        		+ "  \"photoUrls\": [\n"
+	        		+ "    \"string\"\n"
+	        		+ "  ],\n"
+	        		+ "  \"tags\": [\n"
+	        		+ "    {\n"
+	        		+ "      \"id\": 0,\n"
+	        		+ "      \"name\": \"string\"\n"
+	        		+ "    }\n"
+	        		+ "  ],\n"
+	        		+ "  \"status\": \"sold\"\n"
+	        		+ "}")
+			// When
+			.when()
+				.post()
+			// Then
+	            .then()
+	            	.assertThat()
+	                .statusCode(HttpStatus.RESP_OK)
+//	               
+	                //.header("content-type", equalTo("application/json"))
 	                .log().all();
 	                
 	    }
