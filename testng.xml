@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PVAI API_Test">
+    <test name="Search Results">
+        <classes>
+            <class name = "com.pvai.qa.test.PetStoreTest"/>
+        </classes>
+    </test>
+</suite>
