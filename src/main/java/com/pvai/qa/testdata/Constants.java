@@ -16,9 +16,12 @@ public class Constants {
 	 public static final int PET_NOT_FOUND_ERROR_CODE=1;
 	 public static final String PET_NOT_FOUND_ERROR_TYPE="error";
 	 
-	 //
+	 //addNewPet
 	 public static final String ADD_NEW_PET_ERRORMSG="something bad happened";
 	 public static final int ADD_NEW_PET_ERROR_CODE=500;
 	 public static final String ADD_NEW_PET_ERROR_TYPE="unknown";
+	 
+	 //fileUpload
+	 public static final String METADATA_FILE_UPLOAD="File Upload";
 
 }
