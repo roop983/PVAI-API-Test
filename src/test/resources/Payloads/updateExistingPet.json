@@ -1,0 +1,18 @@
+{
+  "id": 922337,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "bunny",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

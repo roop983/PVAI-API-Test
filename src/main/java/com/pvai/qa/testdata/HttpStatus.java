@@ -14,6 +14,8 @@ public interface HttpStatus {
 	
 	public static final int RESP_NOT_FOUND = 404;
 	
+	public static final int RESP_UNSUPPORTED_FORMAT = 415;
+	
 	// --- 5xx Server Error ---
 	
 	public static final int RESP_INTERNAL_SERVER_ERROR = 500;
