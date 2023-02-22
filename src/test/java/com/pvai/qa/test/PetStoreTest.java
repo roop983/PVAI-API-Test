@@ -39,7 +39,7 @@ public class PetStoreTest {
 	      return new String[] {Constants.STATUS_AVAILABLE, Constants.STATUS_PENDING, Constants.STATUS_SOLD};
 	   } 
 	
-	 @Test(dataProvider = "petStatus")
+	 @Test(priority=1, dataProvider = "petStatus")
 	    void findPetByStatus(String statusName){
 		 
 		 Response response = 
@@ -75,26 +75,14 @@ public class PetStoreTest {
 			 Assert.assertTrue(listId.size()==status.length);
 		 }
 		 
-		 if (statusName.equals("available")) {
-			  findPetName = JsonPath.read(jsonString, "$[0].name").toString();
-			  petStatus = JsonPath.read(jsonString, "$[0].status").toString();
-			  findPetId = JsonPath.read(jsonString, "$[0].id");
-			 	System.out.println(findPetName);
-			 	System.out.println(petStatus);
-			 	System.out.println(findPetId);
-			 }
-		 
-		 
 		 if (statusName.equals("sold")) {
 			petIdToBeDeleted = listId.get(1);
 		 	System.out.println(petIdToBeDeleted);
 		 }
 	    }
 	 
-	 @Test(dependsOnMethods = { "findPetByStatus" })
+	 @Test(priority=2, dependsOnMethods = { "findPetByStatus" })
 	    void deletePetById(){
-		 System.out.println("**********");
-		 System.out.println(petIdToBeDeleted);
 	    	  given()
 		        .baseUri("https://petstore.swagger.io")
 		        .accept("application/json")
@@ -113,7 +101,7 @@ public class PetStoreTest {
 		                
 		    }
 	 
-	 @Test
+	 @Test(priority=3)
 	    void deletePetByIdNegativeTest(){
 	    	  given()
 		        .baseUri("https://petstore.swagger.io")
@@ -130,56 +118,14 @@ public class PetStoreTest {
 		    }
 	    
 
-	    @Test(dependsOnMethods = { "findPetByStatus" })
-	    void findPetByIdPositiveTest(){
-	    	
-	    	Number petId= 9223372036854749000L;
-	        given()
-	        .baseUri(Constants.BASE_URI)
-	        .accept("application/json")
-			// When
-			.when()
-				.get("/v2/pet/"+petId)
-			// Then
-	            .then()
-	            	.assertThat()
-//	                .statusCode(HttpStatus.RESP_OK)
-//	                .body("id", equalTo(Constants.ID_SOLD))
-//	                .body("category.id", equalTo(Constants.ID_CATEGORY))
-//	                .body("category.name", equalTo(Constants.CATEGORY_NAME_SOLD))
-//	                .body("name", equalTo(Constants.NAME_SOLD))
-//	                .body("status", equalTo(Constants.STATUS_SOLD))
-	                .header("content-type", equalTo("application/json"))
-	                .log().all();
-	                
-	    }
-	    
-	    
-	    @Test
-	    void findPetByIdNegativeTest(){
-	        given()
-	        .baseUri("https://petstore.swagger.io")
-	        .accept("application/json")
-			// When
-			.when()
-				.get("/v2/pet/"+Constants.INVALID_ID)
-			// Then
-	            .then()
-	            	.assertThat()
-	                .statusCode(HttpStatus.RESP_NOT_FOUND)
-	                .body("code", equalTo(Constants.PET_NOT_FOUND_ERROR_CODE))
-	                .body("type", equalTo(Constants.PET_NOT_FOUND_ERROR_TYPE))
-	                .body("message", equalTo(Constants.PET_NOT_FOUND_ERRORMSG))
-	                .header("content-type", equalTo("application/json"));
-	                
-	    }
-	    
-	    @Test
+	  
+	    @Test(priority=3)
 	    void addNewPetToStorePositiveTest(){
 	    	
 	    	// Creating a File instance
 	        File jsonData = new File("src/test/resources/Payloads/addNewPet.json");
 	        
+	        Response response = 
 	        given()
 	        .baseUri("https://petstore.swagger.io")
 	        .contentType("application/json")
@@ -196,12 +142,21 @@ public class PetStoreTest {
 	                .body("name", equalTo(Constants.NAME_NEW))
 	                .body("status", equalTo(Constants.STATUS_AVAILABLE))
 	                .header("content-type", equalTo("application/json"))
-	                .log().all();
-	                
+	                .extract().response();
+	        
+	        //Extract response as String
+			String jsonString = response.getBody().asString();
+			 
+			findPetName = JsonPath.read(jsonString, "$.name").toString();
+			petStatus = JsonPath.read(jsonString, "$.status").toString();
+			findPetId = JsonPath.read(jsonString, "$.id");
+			System.out.println(findPetName);
+			System.out.println(petStatus);
+			System.out.println(findPetId);     
 	                
 	    }
 	    
-	    @Test    
+	    @Test(priority=3)    
 	    void addNewPetToStoreNegativeTest(){
 	    	
 	    	// Creating a File instance
@@ -222,12 +177,53 @@ public class PetStoreTest {
 	                .body("type", equalTo(Constants.UNKNOWN_TYPE))
 	                .body("message", equalTo(Constants.ERRMSG_BAD_HAPPENED))
 	                .header("content-type", equalTo("application/json"));
-	               
-	               
+
 	                
 	    }
 	    
-	    @Test
+	    @Test(priority=4, dependsOnMethods = { "addNewPetToStorePositiveTest" })
+	    void findPetByIdPositiveTest(){
+	    	
+	        given()
+	        .baseUri(Constants.BASE_URI)
+	        .accept("application/json")
+			// When
+			.when()
+				.get("/v2/pet/"+findPetId)
+			// Then
+	            .then()
+	            	.assertThat()
+	                .statusCode(HttpStatus.RESP_OK)
+	                .body("id", equalTo(findPetId))
+	                .body("name", equalTo(findPetName))
+	                .body("status", equalTo(petStatus))
+	                .header("content-type", equalTo("application/json"))
+	                .log().all();
+	                
+	    }
+	    
+	    
+	    @Test(priority=5)
+	    void findPetByIdNegativeTest(){
+	        given()
+	        .baseUri("https://petstore.swagger.io")
+	        .accept("application/json")
+			// When
+			.when()
+				.get("/v2/pet/"+Constants.INVALID_ID)
+			// Then
+	            .then()
+	            	.assertThat()
+	                .statusCode(HttpStatus.RESP_NOT_FOUND)
+	                .body("code", equalTo(Constants.PET_NOT_FOUND_ERROR_CODE))
+	                .body("type", equalTo(Constants.PET_NOT_FOUND_ERROR_TYPE))
+	                .body("message", equalTo(Constants.PET_NOT_FOUND_ERRORMSG))
+	                .header("content-type", equalTo("application/json"));
+	                
+	    }
+	    
+	    
+	    @Test(priority=5, dependsOnMethods = { "addNewPetToStorePositiveTest" })
 	    void updatePetWithFormData(){
 	    	
 	    	given()
@@ -238,14 +234,14 @@ public class PetStoreTest {
 	        .queryParam("status", Constants.STATUS_SOLD)
 			// When
 			.when()
-				.post("/v2/pet/"+Constants.ID_FOR_UPDATE)
+				.post("/v2/pet/"+findPetId)
 			// Then
 	            .then()
 	            .assertThat()
-//                .statusCode(HttpStatus.RESP_OK)
-//                .body("code", equalTo(Constants.SUCCESS_CODE))
-//                .body("type", equalTo(Constants.UNKNOWN_TYPE))
-//                .body("message", equalTo(String.valueOf(Constants.ID_FOR_UPDATE)))
+                .statusCode(HttpStatus.RESP_OK)
+                .body("code", equalTo(Constants.SUCCESS_CODE))
+                .body("type", equalTo(Constants.UNKNOWN_TYPE))
+                .body("message", equalTo(String.valueOf(findPetId)))
                 .header("content-type", equalTo("application/json"))
                 .log().all();
              
@@ -253,7 +249,7 @@ public class PetStoreTest {
 	    }
 	    
 	    
-	    @Test
+	    @Test(priority=6)
 	    void updatePetWithFormDataWithIdNotFound(){
 	    	
 	    	  given()
@@ -276,7 +272,7 @@ public class PetStoreTest {
 	                   
 	    }
 	    
-	    @Test
+	    @Test(priority=6)
 	    void updatePetWithFormDataWithLongId(){
 	    	
 	    	  given()
@@ -301,7 +297,7 @@ public class PetStoreTest {
 	    }
 	    
 	    
-	    @Test
+	    @Test(priority=7)
 	    void uploadImage(){
 	    	
 	    	// Creating a File instance
@@ -330,7 +326,7 @@ public class PetStoreTest {
 	    }
 	    
 	    
-	    @Test
+	    @Test(priority=8)
 	    void uploadImageNegativeTestInvalidId(){
 	    	
 	    	// Creating a File instance
@@ -358,7 +354,7 @@ public class PetStoreTest {
 	                
 	    }
 	    
-	    @Test
+	    @Test(priority=9)
 	    void uploadImageNegativeTestNoId(){
 	    	
 	    	// Creating a File instance
@@ -385,7 +381,7 @@ public class PetStoreTest {
 	                
 	    }
 	    
-	    @Test
+	    @Test(priority=9)
 	    void uploadImageNegativeTestNoFileNoMetadata(){
 	        
 	        given()
@@ -406,7 +402,7 @@ public class PetStoreTest {
 	                
 	    }
 	    
-	    @Test
+	    @Test(priority=9)
 	    void uploadImageNegativeTestNoFile(){
 
 	        given()
