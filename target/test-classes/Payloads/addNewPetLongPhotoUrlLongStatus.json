@@ -1,0 +1,18 @@
+{
+  "id": 1111111111111111,
+  "category": {
+    "id": "1221",
+    "name": "string"
+  },
+  "name": "aaaaaaaaabbbbbbb-aaaaaaaaabbbbbbb-aaaaaaaaabbbbbbbaaaaaaaaabbbbbbbaaaaaaaaabbbbbbbaaaaaaaaabbbbbbbaaaaaaaaabbbbbbb",
+  "photoUrls": [
+    "http://www.homegain.com/homevalues?task=17&Intent=6&Bedrooms=3&Bathrooms=2&PropertyType=89&TimeFrame=23&PriceRange=175000-199999&xxTrustedFormToken=https%3A%2F%2Fcert.trustedform.com%2F94260b11ab15aee12f2d27acd3eb7a93e1f4d679&xxTrustedFormCertUrl=https%3A%2F%2Fcert.trustedform.com%2F94260b11ab15aee12f2d27acd3eb7a93e1f4d679&xxTrustedFormPingUrl=https%3A%2F%2Fping.trustedform.com%2F0.de-3EwD-0CH3w5mH7F_0sOkwAgJoYoGUmaSgTC01lyEdZ_KOCf_a4Cs2Tnn1qAbqI_Nu5Rb8.kHGxNzJYFT1sLcd0BUoQSg.JUPEB40ES7t2NX-uYDDSdw"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "availableavailableavailableavailableavailableavailable"
+}

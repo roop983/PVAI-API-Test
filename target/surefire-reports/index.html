@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-PVAI_API_Test" class="navigator-link">
+              <span class="suite-name border-passed">PVAI API_Test</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-PVAI_API_Test" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-PVAI_API_Test" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-PVAI_API_Test" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-PVAI_API_Test" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-PVAI_API_Test" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-PVAI_API_Test" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-PVAI_API_Test" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">22 methods,   22 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-PVAI_API_Test" class="hide-methods passed suite-PVAI_API_Test"> (hide)</a> <!-- hide-methods passed suite-PVAI_API_Test -->
+                      <a href="#" panel-name="suite-PVAI_API_Test" class="show-methods passed suite-PVAI_API_Test"> (show)</a> <!-- show-methods passed suite-PVAI_API_Test -->
+                    </span>
+                    <div class="method-list-content passed suite-PVAI_API_Test">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="addNewPetToStorePositiveTest">addNewPetToStorePositiveTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="addNewPetToStoreWithLongCategoryIdServerError">addNewPetToStoreWithLongCategoryIdServerError</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="addNewPetToStoreWithLongNameAndLongStatusPositiveTest">addNewPetToStoreWithLongNameAndLongStatusPositiveTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="addNewPetToStoreWithStringAsIdNegativeTest">addNewPetToStoreWithStringAsIdNegativeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="deletePetById">deletePetById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="deletePetByIdNegativeTest">deletePetByIdNegativeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByIdPositiveTest">findPetByIdPositiveTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByIdWIthInvalidIdNegativeTest">findPetByIdWIthInvalidIdNegativeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByIdWithAlphaNumericIdNegativeTest">findPetByIdWithAlphaNumericIdNegativeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByStatus(sold)">findPetByStatus(sold)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByStatus(pending)">findPetByStatus(pending)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="findPetByStatus(available)">findPetByStatus(available)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="updateExistingPet">updateExistingPet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="updateExistingPetUnknownIdNegativeTest">updateExistingPetUnknownIdNegativeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="updatePetWithFormData">updatePetWithFormData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="updatePetWithFormDataWithLongId">updatePetWithFormDataWithLongId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="updatePetWithFormDataWithUnknownId">updatePetWithFormDataWithUnknownId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="uploadImageNegativeTestInvalidId">uploadImageNegativeTestInvalidId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="uploadImageNegativeTestNoFile">uploadImageNegativeTestNoFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="uploadImageNegativeTestNoFileNoMetadata">uploadImageNegativeTestNoFileNoMetadata</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="uploadImageNegativeTestNoId">uploadImageNegativeTestNoId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PVAI_API_Test" title="com.pvai.qa.test.PetStoreTest" class="method navigator-link" hash-for-method="uploadImagePositiveTest">uploadImagePositiveTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-PVAI_API_Test -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-PVAI_API_Test" class="panel PVAI_API_Test">
+          <div class="suite-PVAI_API_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pvai.qa.test.PetStoreTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewPetToStorePositiveTest">
+                  </a> <!-- addNewPetToStorePositiveTest -->
+                  <span class="method-name">addNewPetToStorePositiveTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewPetToStoreWithLongCategoryIdServerError">
+                  </a> <!-- addNewPetToStoreWithLongCategoryIdServerError -->
+                  <span class="method-name">addNewPetToStoreWithLongCategoryIdServerError</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewPetToStoreWithLongNameAndLongStatusPositiveTest">
+                  </a> <!-- addNewPetToStoreWithLongNameAndLongStatusPositiveTest -->
+                  <span class="method-name">addNewPetToStoreWithLongNameAndLongStatusPositiveTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewPetToStoreWithStringAsIdNegativeTest">
+                  </a> <!-- addNewPetToStoreWithStringAsIdNegativeTest -->
+                  <span class="method-name">addNewPetToStoreWithStringAsIdNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletePetById">
+                  </a> <!-- deletePetById -->
+                  <span class="method-name">deletePetById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletePetByIdNegativeTest">
+                  </a> <!-- deletePetByIdNegativeTest -->
+                  <span class="method-name">deletePetByIdNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByIdPositiveTest">
+                  </a> <!-- findPetByIdPositiveTest -->
+                  <span class="method-name">findPetByIdPositiveTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByIdWIthInvalidIdNegativeTest">
+                  </a> <!-- findPetByIdWIthInvalidIdNegativeTest -->
+                  <span class="method-name">findPetByIdWIthInvalidIdNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByIdWithAlphaNumericIdNegativeTest">
+                  </a> <!-- findPetByIdWithAlphaNumericIdNegativeTest -->
+                  <span class="method-name">findPetByIdWithAlphaNumericIdNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByStatus(sold)">
+                  </a> <!-- findPetByStatus(sold) -->
+                  <span class="method-name">findPetByStatus</span>
+                  <span class="parameters">(sold)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByStatus(pending)">
+                  </a> <!-- findPetByStatus(pending) -->
+                  <span class="method-name">findPetByStatus</span>
+                  <span class="parameters">(pending)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findPetByStatus(available)">
+                  </a> <!-- findPetByStatus(available) -->
+                  <span class="method-name">findPetByStatus</span>
+                  <span class="parameters">(available)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateExistingPet">
+                  </a> <!-- updateExistingPet -->
+                  <span class="method-name">updateExistingPet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateExistingPetUnknownIdNegativeTest">
+                  </a> <!-- updateExistingPetUnknownIdNegativeTest -->
+                  <span class="method-name">updateExistingPetUnknownIdNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatePetWithFormData">
+                  </a> <!-- updatePetWithFormData -->
+                  <span class="method-name">updatePetWithFormData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatePetWithFormDataWithLongId">
+                  </a> <!-- updatePetWithFormDataWithLongId -->
+                  <span class="method-name">updatePetWithFormDataWithLongId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatePetWithFormDataWithUnknownId">
+                  </a> <!-- updatePetWithFormDataWithUnknownId -->
+                  <span class="method-name">updatePetWithFormDataWithUnknownId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadImageNegativeTestInvalidId">
+                  </a> <!-- uploadImageNegativeTestInvalidId -->
+                  <span class="method-name">uploadImageNegativeTestInvalidId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadImageNegativeTestNoFile">
+                  </a> <!-- uploadImageNegativeTestNoFile -->
+                  <span class="method-name">uploadImageNegativeTestNoFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadImageNegativeTestNoFileNoMetadata">
+                  </a> <!-- uploadImageNegativeTestNoFileNoMetadata -->
+                  <span class="method-name">uploadImageNegativeTestNoFileNoMetadata</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadImageNegativeTestNoId">
+                  </a> <!-- uploadImageNegativeTestNoId -->
+                  <span class="method-name">uploadImageNegativeTestNoId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadImagePositiveTest">
+                  </a> <!-- uploadImagePositiveTest -->
+                  <span class="method-name">uploadImagePositiveTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PVAI_API_Test-class-passed -->
+        </div> <!-- panel PVAI_API_Test -->
+        <div panel-name="test-xml-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/rupalidash/eclipse-workspace/PVAI-APITest/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;PVAI API_Test&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Pet Store API Test Search Results&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.pvai.qa.test.PetStoreTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Pet Store API Test Search Results --&gt;
+&lt;/suite&gt; &lt;!-- PVAI API_Test --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for PVAI API_Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Pet Store API Test Search Results (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for PVAI API_Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for PVAI API_Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_PVAI_API_Test');
+function tableData_PVAI_API_Test() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(22);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'findPetByStatus')
+data.setCell(0, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(0, 3, 4561);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'updatePetWithFormData')
+data.setCell(1, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(1, 3, 3871);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'updatePetWithFormDataWithUnknownId')
+data.setCell(2, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(2, 3, 2859);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'updatePetWithFormDataWithLongId')
+data.setCell(3, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(3, 3, 1691);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'findPetByIdWIthInvalidIdNegativeTest')
+data.setCell(4, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(4, 3, 1118);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'uploadImagePositiveTest')
+data.setCell(5, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(5, 3, 1059);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'uploadImageNegativeTestInvalidId')
+data.setCell(6, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(6, 3, 887);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'addNewPetToStorePositiveTest')
+data.setCell(7, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(7, 3, 746);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'addNewPetToStoreWithLongCategoryIdServerError')
+data.setCell(8, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(8, 3, 697);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'findPetByStatus')
+data.setCell(9, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(9, 3, 648);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'uploadImageNegativeTestNoId')
+data.setCell(10, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(10, 3, 613);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'findPetByStatus')
+data.setCell(11, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(11, 3, 612);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'findPetByIdWithAlphaNumericIdNegativeTest')
+data.setCell(12, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(12, 3, 590);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'addNewPetToStoreWithStringAsIdNegativeTest')
+data.setCell(13, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(13, 3, 583);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'findPetByIdPositiveTest')
+data.setCell(14, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(14, 3, 561);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'uploadImageNegativeTestNoFileNoMetadata')
+data.setCell(15, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(15, 3, 552);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'deletePetById')
+data.setCell(16, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(16, 3, 534);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'addNewPetToStoreWithLongNameAndLongStatusPositiveTest')
+data.setCell(17, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(17, 3, 519);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'updateExistingPetUnknownIdNegativeTest')
+data.setCell(18, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(18, 3, 506);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'updateExistingPet')
+data.setCell(19, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(19, 3, 502);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'uploadImageNegativeTestNoFile')
+data.setCell(20, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(20, 3, 492);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'deletePetByIdNegativeTest')
+data.setCell(21, 2, 'com.pvai.qa.test.PetStoreTest')
+data.setCell(21, 3, 487);
+window.suiteTableData['PVAI_API_Test']= { tableData: data, tableDiv: 'times-div-PVAI_API_Test'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <div id="times-div-PVAI_API_Test">
+              </div> <!-- times-div-PVAI_API_Test -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for PVAI API_Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-PVAI_API_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pvai.qa.test.PetStoreTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">findPetByStatus(available)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findPetByStatus(pending)</span>
+                <span class="method-start">4575 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findPetByStatus(sold)</span>
+                <span class="method-start">5224 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addNewPetToStorePositiveTest</span>
+                <span class="method-start">5846 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addNewPetToStoreWithStringAsIdNegativeTest</span>
+                <span class="method-start">6594 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addNewPetToStoreWithLongNameAndLongStatusPositiveTest</span>
+                <span class="method-start">7180 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addNewPetToStoreWithLongCategoryIdServerError</span>
+                <span class="method-start">7700 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findPetByIdPositiveTest</span>
+                <span class="method-start">8415 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findPetByIdWithAlphaNumericIdNegativeTest</span>
+                <span class="method-start">8978 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findPetByIdWIthInvalidIdNegativeTest</span>
+                <span class="method-start">9574 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updatePetWithFormData</span>
+                <span class="method-start">10694 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updatePetWithFormDataWithUnknownId</span>
+                <span class="method-start">14566 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updatePetWithFormDataWithLongId</span>
+                <span class="method-start">17427 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletePetById</span>
+                <span class="method-start">19119 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletePetByIdNegativeTest</span>
+                <span class="method-start">19654 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadImagePositiveTest</span>
+                <span class="method-start">20143 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadImageNegativeTestInvalidId</span>
+                <span class="method-start">21203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadImageNegativeTestNoId</span>
+                <span class="method-start">22092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadImageNegativeTestNoFileNoMetadata</span>
+                <span class="method-start">22706 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadImageNegativeTestNoFile</span>
+                <span class="method-start">23258 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateExistingPet</span>
+                <span class="method-start">23758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateExistingPetUnknownIdNegativeTest</span>
+                <span class="method-start">24261 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="24.715" tests="22" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.5+8"/>
+    <property name="sun.boot.library.path" value="/Volumes/Eclipse/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.5.v20221102-0933/jre/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/rupalidash/eclipse-workspace/PVAI-APITest"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/rupalidash/eclipse-workspace/PVAI-APITest"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.5+8"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/z3/8c3vsq353cv6lg1lwnxlv4hc0000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/rupalidash/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf14790110630665712519.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/rupalidash/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="12.4"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/rupalidash"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="rupalidash"/>
+    <property name="java.class.path" value="/Volumes/Eclipse/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always test"/>
+    <property name="java.home" value="/Volumes/Eclipse/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.5.v20221102-0933/jre"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="17.0.5"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="maven.home" value="/Users/rupalidash/eclipse-workspace/PVAI-APITest/EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Temurin-17.0.5+8"/>
+    <property name="m2e.build.project.data.socket.port" value="57916"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="findPetByStatus" classname="com.pvai.qa.test.PetStoreTest" time="4.574"/>
+  <testcase name="findPetByStatus" classname="com.pvai.qa.test.PetStoreTest" time="0.647"/>
+  <testcase name="findPetByStatus" classname="com.pvai.qa.test.PetStoreTest" time="0.614"/>
+  <testcase name="addNewPetToStorePositiveTest" classname="com.pvai.qa.test.PetStoreTest" time="0.746"/>
+  <testcase name="addNewPetToStoreWithStringAsIdNegativeTest" classname="com.pvai.qa.test.PetStoreTest" time="0.583"/>
+  <testcase name="addNewPetToStoreWithLongNameAndLongStatusPositiveTest" classname="com.pvai.qa.test.PetStoreTest" time="0.518"/>
+  <testcase name="addNewPetToStoreWithLongCategoryIdServerError" classname="com.pvai.qa.test.PetStoreTest" time="0.7"/>
+  <testcase name="findPetByIdPositiveTest" classname="com.pvai.qa.test.PetStoreTest" time="0.559"/>
+  <testcase name="findPetByIdWithAlphaNumericIdNegativeTest" classname="com.pvai.qa.test.PetStoreTest" time="0.595"/>
+  <testcase name="findPetByIdWIthInvalidIdNegativeTest" classname="com.pvai.qa.test.PetStoreTest" time="1.134"/>
+  <testcase name="updatePetWithFormData" classname="com.pvai.qa.test.PetStoreTest" time="3.857"/>
+  <testcase name="updatePetWithFormDataWithUnknownId" classname="com.pvai.qa.test.PetStoreTest" time="2.86"/>
+  <testcase name="updatePetWithFormDataWithLongId" classname="com.pvai.qa.test.PetStoreTest" time="1.691"/>
+  <testcase name="deletePetById" classname="com.pvai.qa.test.PetStoreTest" time="0.533"/>
+  <testcase name="deletePetByIdNegativeTest" classname="com.pvai.qa.test.PetStoreTest" time="0.488"/>
+  <testcase name="uploadImagePositiveTest" classname="com.pvai.qa.test.PetStoreTest" time="1.058"/>
+  <testcase name="uploadImageNegativeTestInvalidId" classname="com.pvai.qa.test.PetStoreTest" time="0.888"/>
+  <testcase name="uploadImageNegativeTestNoId" classname="com.pvai.qa.test.PetStoreTest" time="0.612"/>
+  <testcase name="uploadImageNegativeTestNoFileNoMetadata" classname="com.pvai.qa.test.PetStoreTest" time="0.552"/>
+  <testcase name="uploadImageNegativeTestNoFile" classname="com.pvai.qa.test.PetStoreTest" time="0.497"/>
+  <testcase name="updateExistingPet" classname="com.pvai.qa.test.PetStoreTest" time="0.503"/>
+  <testcase name="updateExistingPetUnknownIdNegativeTest" classname="com.pvai.qa.test.PetStoreTest" time="0.506"/>
+</testsuite>

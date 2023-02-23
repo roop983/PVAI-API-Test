@@ -5,7 +5,8 @@
     <classes>
       <class name="com.pvai.qa.test.PetStoreTest">
         <methods>
-          <include name="addNewPetToStorePositiveTest"/>
+          <include name="deletePetById"/>
+          <include name="findPetByStatus"/>
         </methods>
       </class> <!-- com.pvai.qa.test.PetStoreTest -->
     </classes>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="22" passed="22" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-22T18:41:56 GMT-08:00" name="PVAI API_Test" finished-at="2023-02-22T18:42:20 GMT-08:00" duration-ms="24827">
+    <groups>
+    </groups>
+    <test started-at="2023-02-22T18:41:56 GMT-08:00" name="Pet Store API Test Search Results" finished-at="2023-02-22T18:42:20 GMT-08:00" duration-ms="24827">
+      <class name="com.pvai.qa.test.PetStoreTest">
+        <test-method signature="findPetByStatus(java.lang.String)[pri:1, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:41:56 GMT-08:00" name="findPetByStatus" data-provider="petStatus" finished-at="2023-02-22T18:42:00 GMT-08:00" duration-ms="4561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[available]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByStatus -->
+        <test-method signature="findPetByStatus(java.lang.String)[pri:1, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:00 GMT-08:00" name="findPetByStatus" data-provider="petStatus" finished-at="2023-02-22T18:42:01 GMT-08:00" duration-ms="648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pending]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByStatus -->
+        <test-method signature="findPetByStatus(java.lang.String)[pri:1, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:01 GMT-08:00" name="findPetByStatus" data-provider="petStatus" finished-at="2023-02-22T18:42:02 GMT-08:00" duration-ms="612" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sold]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByStatus -->
+        <test-method signature="addNewPetToStorePositiveTest()[pri:2, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:02 GMT-08:00" name="addNewPetToStorePositiveTest" finished-at="2023-02-22T18:42:02 GMT-08:00" duration-ms="746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStorePositiveTest -->
+        <test-method signature="addNewPetToStoreWithStringAsIdNegativeTest()[pri:3, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:02 GMT-08:00" name="addNewPetToStoreWithStringAsIdNegativeTest" finished-at="2023-02-22T18:42:03 GMT-08:00" duration-ms="583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStoreWithStringAsIdNegativeTest -->
+        <test-method signature="addNewPetToStoreWithLongNameAndLongStatusPositiveTest()[pri:4, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:03 GMT-08:00" name="addNewPetToStoreWithLongNameAndLongStatusPositiveTest" finished-at="2023-02-22T18:42:03 GMT-08:00" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStoreWithLongNameAndLongStatusPositiveTest -->
+        <test-method signature="addNewPetToStoreWithLongCategoryIdServerError()[pri:5, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:03 GMT-08:00" name="addNewPetToStoreWithLongCategoryIdServerError" finished-at="2023-02-22T18:42:04 GMT-08:00" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStoreWithLongCategoryIdServerError -->
+        <test-method signature="findPetByIdPositiveTest()[pri:6, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:04 GMT-08:00" name="findPetByIdPositiveTest" finished-at="2023-02-22T18:42:05 GMT-08:00" depends-on-methods="com.pvai.qa.test.PetStoreTest.addNewPetToStorePositiveTest" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByIdPositiveTest -->
+        <test-method signature="findPetByIdWithAlphaNumericIdNegativeTest()[pri:7, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:05 GMT-08:00" name="findPetByIdWithAlphaNumericIdNegativeTest" finished-at="2023-02-22T18:42:05 GMT-08:00" duration-ms="590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByIdWithAlphaNumericIdNegativeTest -->
+        <test-method signature="findPetByIdWIthInvalidIdNegativeTest()[pri:8, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:05 GMT-08:00" name="findPetByIdWIthInvalidIdNegativeTest" finished-at="2023-02-22T18:42:06 GMT-08:00" duration-ms="1118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByIdWIthInvalidIdNegativeTest -->
+        <test-method signature="updatePetWithFormData()[pri:9, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:06 GMT-08:00" name="updatePetWithFormData" finished-at="2023-02-22T18:42:10 GMT-08:00" depends-on-methods="com.pvai.qa.test.PetStoreTest.addNewPetToStorePositiveTest" duration-ms="3871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetWithFormData -->
+        <test-method signature="updatePetWithFormDataWithUnknownId()[pri:10, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:10 GMT-08:00" name="updatePetWithFormDataWithUnknownId" finished-at="2023-02-22T18:42:13 GMT-08:00" duration-ms="2859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetWithFormDataWithUnknownId -->
+        <test-method signature="updatePetWithFormDataWithLongId()[pri:11, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:13 GMT-08:00" name="updatePetWithFormDataWithLongId" finished-at="2023-02-22T18:42:15 GMT-08:00" duration-ms="1691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetWithFormDataWithLongId -->
+        <test-method signature="deletePetById()[pri:12, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:15 GMT-08:00" name="deletePetById" finished-at="2023-02-22T18:42:15 GMT-08:00" depends-on-methods="com.pvai.qa.test.PetStoreTest.addNewPetToStorePositiveTest" duration-ms="534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePetById -->
+        <test-method signature="deletePetByIdNegativeTest()[pri:13, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:15 GMT-08:00" name="deletePetByIdNegativeTest" finished-at="2023-02-22T18:42:16 GMT-08:00" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePetByIdNegativeTest -->
+        <test-method signature="uploadImagePositiveTest()[pri:14, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:16 GMT-08:00" name="uploadImagePositiveTest" finished-at="2023-02-22T18:42:17 GMT-08:00" duration-ms="1059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadImagePositiveTest -->
+        <test-method signature="uploadImageNegativeTestInvalidId()[pri:15, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:17 GMT-08:00" name="uploadImageNegativeTestInvalidId" finished-at="2023-02-22T18:42:18 GMT-08:00" duration-ms="887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadImageNegativeTestInvalidId -->
+        <test-method signature="uploadImageNegativeTestNoId()[pri:16, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:18 GMT-08:00" name="uploadImageNegativeTestNoId" finished-at="2023-02-22T18:42:18 GMT-08:00" duration-ms="613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadImageNegativeTestNoId -->
+        <test-method signature="uploadImageNegativeTestNoFileNoMetadata()[pri:17, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:18 GMT-08:00" name="uploadImageNegativeTestNoFileNoMetadata" finished-at="2023-02-22T18:42:19 GMT-08:00" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadImageNegativeTestNoFileNoMetadata -->
+        <test-method signature="uploadImageNegativeTestNoFile()[pri:18, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:19 GMT-08:00" name="uploadImageNegativeTestNoFile" finished-at="2023-02-22T18:42:19 GMT-08:00" duration-ms="492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadImageNegativeTestNoFile -->
+        <test-method signature="updateExistingPet()[pri:19, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:19 GMT-08:00" name="updateExistingPet" finished-at="2023-02-22T18:42:20 GMT-08:00" duration-ms="502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateExistingPet -->
+        <test-method signature="updateExistingPetUnknownIdNegativeTest()[pri:20, instance:com.pvai.qa.test.PetStoreTest@58a9760d]" started-at="2023-02-22T18:42:20 GMT-08:00" name="updateExistingPetUnknownIdNegativeTest" finished-at="2023-02-22T18:42:20 GMT-08:00" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateExistingPetUnknownIdNegativeTest -->
+      </class> <!-- com.pvai.qa.test.PetStoreTest -->
+    </test> <!-- Pet Store API Test Search Results -->
+  </suite> <!-- PVAI API_Test -->
+</testng-results>

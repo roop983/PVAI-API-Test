@@ -13,6 +13,13 @@ public class Constants {
 	 public static final int UNSUPPORTED_FORMAT=415;
 	 public static final int INTERNAL_SERVER_ERROR=500;
 	 
+	 //Content Types
+	 public static final String APPLICATION_JSON="application/json";
+	 public static final String APPLICATION_FORM_URL_ENCODED="application/x-www-form-urlencoded";
+	 public static final String MULTIPART_FORM_DATA="multipart/form-data";
+	 public static final String HTML_TEXT_CHARSET_ISO_8859="text/html; charset=ISO-8859-1";
+	 
+	 
 	 //Exception Messages
 	 public static final String MIME_PARSING_EXCEPTION="org.jvnet.mimepull.MIMEParsingException: Missing start boundary";
 	 public static final String NUMBER_FORMAT_EXCEPTION="java.lang.NumberFormatException";
@@ -49,7 +56,8 @@ public class Constants {
 	 
 	 //FormData Update
 	 public static final int ID_FOR_UPDATE=112;
-	// public static final long ID_LONG=6686868686868676766786L;
+	
+	 
 
 
 
