@@ -4,7 +4,7 @@ Website: https://petstore.swagger.io.
 
 Test Steps:
 
-Developed the project using Java, Rest Assured, TestNg and JSON Path libraries. 
+Developed the project using Java, Rest Assured (BDD style pattern), TestNg and JSON Path libraries. 
 
 Please follow the below steps to execute the code.
 
